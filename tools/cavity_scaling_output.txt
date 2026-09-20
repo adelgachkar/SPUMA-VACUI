@@ -1,0 +1,45 @@
+== 1) cavity fraction p_f(b): first-passage prediction p_f = exp(-2 b m0), m0=1.5 ==
+     b   p_f sim (L=256, 3 seeds)  exp(-2bm0)
+  0.05                     0.7857      0.8607
+  0.10                     0.6533      0.7408
+  0.15                     0.5374      0.6376
+  0.20                     0.4426      0.5488
+  0.30                     0.2992      0.4066
+  0.50                     0.1409      0.2231
+  0.80                     0.0491      0.0907
+  1.20                     0.0140      0.0273
+  1.80                     0.0032      0.0045
+  2.50                     0.0015      0.0006
+  3.20                     0.0013      0.0001
+-> simulated b_c (p_f = p_c = 0.5927): 0.126   (first-passage estimate: 0.174)
+
+== 2) critical regime b ~= b_c: cluster-factor scaling (L sweep, 3 seeds) ==
+    L     p_f  span%  tau fit  s_c=<s2>/<s1>
+   64  0.5946  100.0    0.924          165.1
+  128  0.5932   33.3    0.930          480.7
+  256  0.5888    0.0    0.917         1725.1
+  384  0.5890   33.3    0.934         3991.9
+-> tau fit ~ 0.917 vs 2D percolation 3.896
+-> cutoff growth s_c ~ L^D: fitted D = 1.78 vs 1.90 (critical) ; spanning -> 100% at b_c
+
+== 3) off-critical b = b_c + 0.05: cluster-factor saturation ==
+   s_c(L=64,128,256) = 22.9, 37.1, 40.0 -> flat (L-independent): noncritical cluster factor
+
+== 4) colored noise lc=3px at b=0.30: characteristic cavity blobs ==
+   L=128: p_f=0.299  s_c=   29.3  span=0%
+      n(s) top bins s~[  9  15  25  42  70 116]:       39       16        8        3        1        0
+   L=256: p_f=0.296  s_c=   31.6  span=0%
+      n(s) top bins s~[ 11  18  32  54  93 159]:      114       47       20        6        1        0
+
+== 5) isolated-cavity regime b=0.30 (white): n(s) binned (L=256, pooled) ==
+   s~    1   n(s)~  32823.7
+   s~    1   n(s)~   6679.1
+   s~    2   n(s)~      0.0
+   s~    3   n(s)~   2994.9
+   s~    5   n(s)~    841.7
+   s~    7   n(s)~    258.3
+   s~   10   n(s)~    163.2
+   s~   14   n(s)~     33.4
+   s~   21   n(s)~      9.4
+   s~   30   n(s)~      1.0
+   mean cavity size = 2.34 sites ; largest = 36
