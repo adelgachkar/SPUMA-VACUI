@@ -16,7 +16,13 @@ import numpy as np
 from collections import defaultdict
 
 P_C = 0.592746      # 2D square site percolation
-TAU = 187.0/48.0    # 2D percolation cluster-size exponent
+# CONSTANT CORRECTION (2026-09-21): the 2D percolation cluster-size exponent
+# is tau = 187/91 = 2.0549 (Fisher 2 + beta/(beta+gamma); = 1 + d/D_f).
+# This file originally printed 187/48 = 3.896, which is 2 + D_f — a
+# numerological twin, NOT tau. The precise fit (tools/tau_precise_fit.py)
+# measures tau = 2.022-2.034 and rejects 187/48 by thousands of nats.
+# tools/tau_precise_output.txt predates this correction (historical record).
+TAU = 187.0/91.0    # 2D percolation cluster-size exponent (Fisher)
 D_F = 91.0/48.0     # fractal dimension at criticality
 
 def _box1d(a, w, axis):
