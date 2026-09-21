@@ -1,0 +1,57 @@
+== Spectral regime prediction: cavity fundamental frequency from the exact
+   on-lattice Dirichlet Laplacian (s<=300 exact); spanning clusters removed
+   by boundary test; discriminator: gamma_s = 1/d_s. p_f printed per run.
+
+-- operator sanity: exact n x n squares vs sqrt(4-4cos(pi/(n+1)))
+   n=  4: omega=0.874032 analytic=0.874032 diff=1.1e-16
+   n=  8: omega=0.491151 analytic=0.491151 diff=5.6e-17
+   n= 16: omega=0.260974 analytic=0.260974 diff=5.1e-14
+
+-- calibrating b_c on p_f (L=256, 2 seeds each):
+   b=0.122: p_f = 0.6028  (target 0.592746)
+   b=0.126: p_f = 0.5933  (target 0.592746)
+   b=0.130: p_f = 0.5840  (target 0.592746)
+   b=0.134: p_f = 0.5743  (target 0.592746)
+   -> chosen b_c = 0.126
+
+-- white subcritical (b=0.30)
+   p_f = 0.2987 (target 0.592746)   clusters total=33620, exact-solved=33620 (spanning/network excluded=0)
+   s_max(solved)=41  omega=[1.0042,2.000] (0.30 dec)
+   gamma_s = 0.095 (R^2=0.058, n=156)  ->  d_s = 10.534
+   alpha1: +0.63 (R^2=0.007)   alpha2: +0.00 (R^2=0.000)
+   shape: Q=6.12, support=0.16 dec, std(ln w)=0.135, std(ln s)=0.707
+
+-- critical (b=0.126, L=512)
+   p_f = 0.5938 (target 0.592746)   clusters total=14639, exact-solved=14596 (spanning/network excluded=43)
+   s_max(solved)=295  omega=[0.7175,2.000] (0.45 dec)
+   gamma_s = 0.116 (R^2=0.460, n=843)  ->  d_s = 8.595
+   alpha1: +2.63 (R^2=0.185)   alpha2: -1.33 (R^2=0.055)
+   shape: Q=3.40, support=0.24 dec, std(ln w)=0.194, std(ln s)=1.025
+
+-- colored noise (lc=3, b=0.30)
+   p_f = 0.2953 (target 0.592746)   clusters total=10986, exact-solved=10986 (spanning/network excluded=0)
+   s_max(solved)=208  omega=[0.6216,2.000] (0.51 dec)
+   gamma_s = 0.173 (R^2=0.406, n=1341)  ->  d_s = 5.776
+   alpha1: -1.55 (R^2=0.063)   alpha2: -3.77 (R^2=0.311)
+   shape: Q=3.27, support=0.34 dec, std(ln w)=0.269, std(ln s)=1.205
+
+== Discriminators ==
+white subcritical                  BAND  support=0.16 dec, Q=6.1   -> near-homogeneous (A1 ok)
+critical (b=0.126, L=512)          TAIL  see below   -> FORBIDDEN register (network)
+colored noise                      LINE  Q=3.3, support=0.34 dec   -> homogeneous register (A1 strongest)
+
+-> critical-regime spectral dimension (the discriminator):
+   measured gamma_s = 0.116  ->  d_s = 8.595
+   reference bands: compact-like gamma~=0.50 (d_s=2) | ramified gamma~=0.72-0.75 (d_s~1.31-4/3)
+   verdict: COMPACT-LIKE
+   predicted alpha1 = d_s(tau-1)-1: compact-like 1.11 | ramified +0.41
+   measured alpha1 = +2.63, alpha2 = -1.33 (alpha2 robust prediction ~ -0.9)
+
+-> linewidth = polydispersity probe (colored regime, ln space):
+   std(ln omega) = 0.269  vs  (1/2) std(ln s) = 0.602  (compact rule; small-cavity discrete saturation compresses the line)
+
+Caveats (honest): (1) lattice units c/a=1; s<~4 deviates O(1) from continuum.
+(2) tau = 187/91 (K1 docstring printed 187/48 = 2 + D_f, not tau).
+(3) exponent fits restricted to 16<=s<=300 (exact solver); larger clusters
+    counted but unsolved — coverage printed per run.
+(4) spanning network removed by boundary test; p_f calibrated to 0.588-0.598.
