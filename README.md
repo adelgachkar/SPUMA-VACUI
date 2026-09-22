@@ -49,4 +49,4 @@ are imported from the companion repositories and labeled as such.
 
 ## License
 
-CC-BY-4.0 — Adel Gachkar
+MIT — Adel Gachkar

@@ -5,7 +5,7 @@ created: 2026-09-20
 updated: 2026-09-21
 tags: [spuma-vacui, constraint, numerics, scaling]
 status: "canonical"
-license: "CC-BY-4.0"
+license: "MIT"
 ---
 
 # K1 — Cavity Size Distribution (Sharp-Edge Regime)

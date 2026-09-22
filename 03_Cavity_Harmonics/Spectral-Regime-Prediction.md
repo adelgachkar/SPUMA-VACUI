@@ -5,7 +5,7 @@ created: 2026-09-21
 updated: 2026-09-21
 tags: [spuma-vacui, harmonics, numerics, falsifiable]
 status: "canonical"
-license: "CC-BY-4.0"
+license: "MIT"
 ---
 
 # Spectral Regime Prediction

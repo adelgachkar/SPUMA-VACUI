@@ -5,7 +5,7 @@ created: 2026-09-20
 updated: 2026-09-20
 tags: [spuma-vacui, axiom, harmonics]
 status: "canonical"
-license: "CC-BY-4.0"
+license: "MIT"
 ---
 
 # A4 — Harmonics from Interior-Field/Edge-Sweep Antagonism

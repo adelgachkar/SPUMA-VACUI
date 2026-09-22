@@ -5,7 +5,7 @@ created: 2026-09-20
 updated: 2026-09-20
 tags: [spuma-vacui, companion, bridge]
 status: "canonical"
-license: "CC-BY-4.0"
+license: "MIT"
 ---
 
 # Companion Bridge — Emergence-SDF-Vault / CADENCE-SDF

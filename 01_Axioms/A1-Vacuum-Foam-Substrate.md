@@ -5,7 +5,7 @@ created: 2026-09-20
 updated: 2026-09-20
 tags: [spuma-vacui, axiom, substrate]
 status: "canonical"
-license: "CC-BY-4.0"
+license: "MIT"
 ---
 
 # A1 — Vacuum Foam Substrate

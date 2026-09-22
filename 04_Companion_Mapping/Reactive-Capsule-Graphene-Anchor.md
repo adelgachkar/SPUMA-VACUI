@@ -5,7 +5,7 @@ created: 2026-09-20
 updated: 2026-09-20
 tags: [spuma-vacui, anchor, experiment, flexoelectricity]
 status: "canonical"
-license: "CC-BY-4.0"
+license: "MIT"
 ---
 
 # Reactive Capsule Constraint — Graphene Orbital Flexoelectricity Anchor
