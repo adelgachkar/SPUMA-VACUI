@@ -44,8 +44,21 @@ with a quantitative, threshold-armed falsification protocol in
 ## Epistemic Status
 
 Model-level claims with executed numerical protocols; no empirical cosmological
-claim is made. Companion constants (δθ = 7.356103°, φ_max = 0.7405, f_c ≈ 30 THz)
-are imported from the companion repositories and labeled as such.
+claim is made. Imported constants (δθ = 7.356103°, φ_max = 0.7405, f_c ≈ 30 THz)
+come from the companion repositories and are labeled as such.
+
+**Per-number epistemic triage — every number in this repository belongs to
+exactly one of three classes:**
+
+| Class | Meaning | Numbers in this repo |
+|---|---|---|
+| **Closed geometry** | exact mathematics *of the model*, derivable on paper; **not** a measured quantity of nature | φ_max = π/√18 = 0.7405 (Kepler packing bound); δθ = 2π − 5·arccos(1/3) = 7.356103° (tetrahedral five-fold deficit); pair/single ladder 3d/L; monopole ≡ 0; two-sheet wall exactness |
+| **Our own simulations** | reproducible in silico via `tools/`; no external empirical validation exists for any of them | freeze-edge rectification (71% two-bin cut, 200k walkers); 12.3% weave-registry mismatch; K1 cluster scaling (D = 1.78, p_f = e^(−2bm₀), b_c = 0.126); **f_c = κ_hop/π ≈ 30 THz** — derived from κ_hop = 0.025g²ω₀ with g = 0.8 fixed by *our own* Meep cavity benchmark; **no laboratory has measured f_c** |
+| **Real empirical phenomena** | measured in the real world by others; imported strictly as mechanism anchors | the 2026 graphene-wrinkle experiment (shape-only polarization, quantum orbital flexoelectricity) — anchors the **K2 mechanism only**; it neither tests the foam nor measures any constant above |
+
+In short: two of the three imported constants (δθ, φ_max) are closed-geometry
+mathematics, one (f_c) is a product of our own simulation chain, and the single
+real-world experimental anchor (graphene) certifies a mechanism, not the substrate.
 
 ## License
 
