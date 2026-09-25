@@ -54,7 +54,13 @@ VERDICT:
   2. They DO meet, exactly once: (b, d) = (0.0574, 0.0686) with b_eff = b_c —
      field critical AND classification edge co-occur [measured + exact model].
   3. No-go at b_c: d_crit=0.002 < d_det=0.0067 < d_class=0.0686 — criticality
-     excludes any detectable residue; conversely a residue-REAL correction
+     excludes any detectable residue AT THE CANONICAL BUDGET. W3 update
+     (2026-09-25): the exemption is BUDGET-LIMITED, not absolute — LIMEN
+     `limen_d_crit_price.py` measures the crossing bracket X* in
+     [1.97e7, 2.36e7] walker-steps (10-12x canonical; analytic 8.2x) where
+     d_det = 0.00194 <= d_crit: one decade of extra budget makes the notch
+     residue DETECTABLE. The no-go is an economic statement, not a law.
+     Conversely a residue-REAL correction
      (d > d_class) drives the field deep-subcritical (isolated cavities —
      SPUMA's desired register). The classification edge GUARDS the entrance
      of the isolated-cavity regime.
