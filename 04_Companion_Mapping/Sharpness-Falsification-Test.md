@@ -2,61 +2,61 @@
 title: "Sharpness-vs-Substrate Falsification Test"
 aliases: ["Sharpness Falsification Test", "Capsule vs Substrate vs Gauge"]
 created: 2026-09-20
-updated: 2026-09-20
+updated: 2026-09-25
 tags: [spuma-vacui, falsification, protocol, numerics]
 status: "canonical"
 license: "MIT"
+lang: "en"
 ---
 
 # Sharpness-vs-Substrate Falsification Test
-## آزمون فالسیفایبل تیزی-در-برابر-بستر — مدل کمّی و توان‌های تفکیک
 
 > **Structural Causal Chain (SPUMA):**
 > Curvature Gradient → Polarization P(R) → Back-Reaction dR/R → **Exponent Discrimination** → Verdict
 
-## 1. Quantitative Model / مدل کمّی
+## 1. Quantitative Model
 
-**قانون قطبش** (اندازه‌گیری مستقل: نقشهٔ پتانسیل موضعی):
+**The polarization law** (independent measurement: the local-potential map):
 
 $$P(R) = P_0\Big(\frac{a}{R}\Big)^{n_p},\qquad
-n_p = 2\ \ \text{(حد گرادیانی کلاسیک: t/R}\to(a/R)^2\text{)}$$
+n_p = 2\ \ \text{(the classical gradient limit: t/R}\to(a/R)^2\text{)}$$
 
-**سه کانال رقیب برای بازخورد انتقال** (تغییر مقاومت نسبی dR/R):
+**Three competing channels for the transport feedback** (the relative resistance change dR/R):
 
-| کانال | توان تیزی n_b (در a/R) | توان ارتفاع m_b (در H) | پایهٔ کتگوریک |
+| Channel | sharpness exponent n_b (in a/R) | height exponent m_b (in H) | categorical basis |
 |---|---|---|---|
-| **کپسول راکتیو** (ادعای SPUMA) | **n_b = n_p** (قطبش را دنبال می‌کند) | m_b ≈ 0 | حساس به گیت و واپاشی |
-| گیج شبه-مکانیکی (伪 gauge) | n_b = 2 (hfc²~R⁻²) | m_b = 1/2 | بی‌حس |
-| تماس بستر (MoS₂ strain) | n_b = 1 (ε² ~ H/R) | m_b = 1 | بی‌حس |
+| **Reactive capsule** (the SPUMA claim) | **n_b = n_p** (follows the polarization) | m_b ≈ 0 | sensitive to gate and decay |
+| Quasi-mechanical gauge (伪 gauge) | n_b = 2 (hfc²~R⁻²) | m_b = 1/2 | insensitive |
+| Substrate contact (MoS₂ strain) | n_b = 1 (ε² ~ H/R) | m_b = 1 | insensitive |
 
-## 2. Overdetermined Verdict / حکم بیش‌تعیین‌شده
+## 2. Overdetermined Verdict
 
-دو توان پیوسته + دو پایهٔ کتگوریک:
+Two continuous exponents + two categorical bases:
 
-1. **گیت:** زیرلایهٔ رسانا (گرافن روی فلز) میدان گیت کپسول را می‌کُشد — اگر سیگنال ناپدید شد، کانال کپسول است.
-2. **واپاشی:** لایهٔ hBN میانی، میدان کپسول را نمایی تضعیف می‌کند (طول واپاشی λ) — گیج/بستر بی‌حس‌اند.
+1. **Gate:** a conducting underlayer (graphene on metal) kills the capsule's gate field — if the signal vanishes, the channel is the capsule.
+2. **Decay:** an intermediate hBN layer attenuates the capsule's field exponentially (decay length λ) — gauge/substrate are insensitive.
 
-$$\text{REJECT capsule} \iff |n_b-n_p|>0.25\ \ \text{یا}\ \ m_b>0.2\ \ \text{یا بی‌حسی به گیت/واپاشی}$$
+$$\text{REJECT capsule} \iff |n_b-n_p|>0.25\ \ \text{or}\ \ m_b>0.2\ \ \text{or insensitivity to gate/decay}$$
 
-## 3. Synthetic Validation / اعتبارسنجی سنتتیک
+## 3. Synthetic Validation
 
-`tools/sharpness_vs_substrate_test.py` (خروجی: `tools/sharpness_test_output.txt`) — دادهٔ سنتزی با نوفهٔ ۴٪، بازیابی توان با برازش log-log:
+`tools/sharpness_vs_substrate_test.py` (output: `tools/sharpness_test_output.txt`) — synthetic data with 4% noise, exponent recovery by log-log fitting:
 
-| کانال تزریق‌شده | n_b بازیابی‌شده | m_b بازیابی‌شده | حکم ماتریس |
+| Injected channel | recovered n_b | recovered m_b | verdict matrix |
 |---|---|---|---|
-| capsule | 2.006 (هدف 2) | 0.008 (هدف 0) | ✅ capsule (رأی ۴) |
-| gauge | 2.010 (هدف 2) | 0.505 (هدف 0.5) | ✅ gauge (رأی ۳) |
-| substrate | 0.981 (هدف 1) | 0.997 (هدف 1) | ✅ substrate (رأی ۳) |
+| capsule | 2.006 (target 2) | 0.008 (target 0) | ✅ capsule (4 votes) |
+| gauge | 2.010 (target 2) | 0.505 (target 0.5) | ✅ gauge (3 votes) |
+| substrate | 0.981 (target 1) | 0.997 (target 1) | ✅ substrate (3 votes) |
 
-مرجع قطبش: n_p = 2.044 بازیابی شد (هدف 2.0)؛ P(1nm) ≈ 6.6 mC/m² در مقیاس لنگر — سازگار با رژیم مداری.
+Polarization reference: n_p = 2.044 recovered (target 2.0); P(1nm) ≈ 6.6 mC/m² at the anchor scale — consistent with the orbital regime.
 
-## 4. Experimental Recipe / دستور آزمایشی
+## 4. Experimental Recipe
 
-1. نقشهٔ پتانسیل حول چین‌های با تیزی‌های متفاوت (STM/KPFM) → n_p (مرجع).
-2. پیمایش R در H ثابت و پیمایش H در R ثابت روی dR/R انتقال → (n_b, m_b).
-3. دو کلید کتگوریک: زیرلایهٔ رسانا (گیت) و میانی hBN (واپاشی).
-4. حکم از ماتریس بیش‌تعیین‌شده — هیچ توان منفردی کافی نیست (n_b=2 بین کپسول و گیج مشترک است؛ تفکیک با m_b و کلیدها).
+1. Map the potential around folds of different sharpness (STM/KPFM) → n_p (reference).
+2. Sweep R at fixed H and sweep H at fixed R on the transport dR/R → (n_b, m_b).
+3. The two categorical keys: a conducting underlayer (gate) and an intermediate hBN (decay).
+4. Verdict from the overdetermined matrix — no single exponent is sufficient (n_b=2 is shared between capsule and gauge; discrimination comes from m_b and the keys).
 
-## 5. Status / وضعیت
+## 5. Status
 
-**پروتکل مشخص + اعتبارسنجی سنتتیک کامل** — اجرای واقعی نیازمند دادهٔ آزمایشگاهی (نقشهٔ پتانسیل و انتقال همان نمونه‌های چین گسنگاه/MoS₂). فالسیفایبل بودن ادعای «کپسول راکتیو = قید مؤثر» اکنون کمّی و آستانه‌دار است: [[Reactive-Capsule-Graphene-Anchor]].
+**Specified protocol + full synthetic validation** — a real execution requires laboratory data (the potential and transport maps of the same graphene/MoS₂ fold samples). The falsifiability of the claim "reactive capsule = effective constraint" is now quantitative and thresholded: [[Reactive-Capsule-Graphene-Anchor]].

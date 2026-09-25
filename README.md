@@ -1,6 +1,6 @@
 # SPUMA-VACUI
 
-**فومِ خلأ** — Vacuum-Foam Genesis from Two Binding Constraints
+**Spuma Vacui** ("the foam of the vacuum") — Vacuum-Foam Genesis from Two Binding Constraints
 
 > SPUMA-VACUI (*spuma vacui*, "foam of the vacuum") is the structural-companion
 > project to [Emergence-SDF-Vault](https://github.com/adelgachkar/Emergence-SDF-Vault)

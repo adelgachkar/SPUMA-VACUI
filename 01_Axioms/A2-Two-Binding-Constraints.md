@@ -2,44 +2,44 @@
 title: "A2 — Two Binding Constraints"
 aliases: ["A2 Constraints", "Discontinuity and Non-Continuity"]
 created: 2026-09-20
-updated: 2026-09-20
+updated: 2026-09-25
 tags: [spuma-vacui, axiom, constraints]
 status: "canonical"
 license: "MIT"
+lang: "en"
 ---
 
 # A2 — Two Binding Constraints
-## اصل ۲ — دو حد قیدی
 
 > **Structural Causal Chain (SPUMA):**
 > Vacuum Foam → **(K1) Vacuum Discontinuity** + **(K2) Unbounded Polarization-Tension Non-Continuity** → Near-Homogeneous Polarized Cavities → Wall Envelope → Intrinsic Harmonics
 
-## 1. The Claim / ادعا
+## 1. The Claim
 
-همهٔ ساختاربندی فوم خلأ از تقابل **دقیقاً دو حد قیدی** می‌آید — نه بیشتر:
+All structuring of the vacuum foam comes from the opposition of **exactly two binding constraints** — no more:
 
-$$\boxed{\;\text{SPUMA} \;=\; \text{Foam} \;+\; \underbrace{K1}_{\text{حد انفصال خلأ}} \;+\; \underbrace{K2}_{\text{عدم پیوستگی تنش قطبیدگی}}\;}$$
+$$\boxed{\;\text{SPUMA} \;=\; \text{Foam} \;+\; \underbrace{K1}_{\text{vacuum discontinuity}} \;+\; \underbrace{K2}_{\text{polarization-tension non-continuity}}\;}$$
 
-## 2. K1 — Vacuum Discontinuity / حد انفصال خلأ
+## 2. K1 — Vacuum Discontinuity
 
-نوفه در تراکم میانه **یک‌سوژه (rectified)** می‌شود: زیر آستانهٔ ρ₀ گام‌های نوفه‌ای پس زده می‌شوند (منجمد)، بالای ρ₀ سیال با سوگیری انبساط ناحیه‌ای. کاواک = جزیرهٔ منجمد بریده از دریای سیال.
+The mid-density noise is **rectified**: below the threshold ρ₀ noise steps are rejected (frozen), above ρ₀ they flow with a regional-expansion bias. Cavity = a frozen island cut off from the flowing sea.
 
 $$\text{step accepted} \iff \rho \ge \rho_0,\qquad
 \text{bias}(\rho) = b\,\Theta(\rho-\rho_0)$$
 
-صورت‌بندی کمّی و آزمون عددی: K1-Vacuum-Discontinuity]].
+Quantitative formulation and the numerical test: [[K1-Vacuum-Discontinuity]].
 
-## 3. K2 — Unbounded Polarization-Tension Non-Continuity / عدم پیوستگی بی‌نهایت تنش قطبیدگی
+## 3. K2 — Unbounded Polarization-Tension Non-Continuity
 
-مرز حفره یک **ناپیوستگی تیز قطبش** است: لایهٔ قطبیت با پوش دیواره از پوش تراوایی — همتای ساختاری **ترک آهنربای دائم** (تصویر broken-magnet-weave): شکستن آهنربا دو تکه نمی‌دهد، دو آهنربای دیواره‌قطبیده می‌دهد؛ میدان در دیواره محبوس می‌شود و مونوپل هرگز آزاد نمی‌شود.
+The cavity boundary is a **sharp polarization discontinuity**: a polarity layer with a wall envelope drawn from the permeability envelope — the structural twin of the **crack in a permanent magnet** (the broken-magnet-weave picture): breaking a magnet does not give two chunks, it gives two wall-polarized magnets; the field is trapped in the wall and the monopole is never freed.
 
 $$\mathbf{P}(x) = P_0\,\Theta_{\text{wall}},\qquad
-\oint_{\partial V}\mathbf{B}\cdot d\mathbf{A} = 0\ \ \text{(مونوپل ممنوع)}$$
+\oint_{\partial V}\mathbf{B}\cdot d\mathbf{A} = 0\ \ \text{(monopole forbidden)}$$
 
-طیف واپاشی: 1/r³ (تک‌دامنه) → 1/r⁴ (جفت قطبیده) → 1/r⁵ (چهارقطبه). صورت‌بندی کمّی: K2-Polarization-Discontinuity]].
+Decay ladder: 1/r³ (single dipole) → 1/r⁴ (dipole pair) → 1/r⁵ (quadrupole). Quantitative formulation: [[K2-Polarization-Discontinuity]].
 
-## 4. Why Exactly Two / چرا دقیقاً دو
+## 4. Why Exactly Two
 
-- K1 **وجود و همگنی** کاواک‌ها را می‌سازد (انجماد لبه‌ای → کاواک‌های تقریباً هم‌گن).
-- K2 **جهت و انسجام** را می‌سازد (قطبدگی مسیردهی → پوش دیواره → هارمونی درونی از تقابل میدان درونی و سوگیری لبه‌ای).
-- حذف هر یک، نیمی از پدیدارشناسی را از دست می‌دهد: بدون K1 هیچ حفره‌ای؛ بدون K2 هیچ قطبیدگی و هارمونی‌ای. این «کفایت دوگانه» گزاره‌ای آزمون‌پذیر است: هر پدیدهٔ فوم که با هیچ‌کدام از دو حد بازسازی نشود، نقض SPUMA است.
+- K1 builds the **existence and homogeneity** of cavities (edge freezing → near-homogeneous cavities).
+- K2 builds the **direction and coherence** (path polarization → wall envelope → intrinsic harmonics from the interior-field/edge-sweep antagonism).
+- Removing either one loses half the phenomenology: without K1 no cavities at all; without K2 no polarization and no harmonics. This "dyadic sufficiency" is a testable statement: any foam phenomenon that cannot be reconstructed from the two constraints is a violation of SPUMA.

@@ -2,57 +2,58 @@
 title: "SPUMA-VACUI — Master Map"
 aliases: ["SPUMA VACUI", "Spuma Vacui Master Map"]
 created: 2026-09-20
-updated: 2026-09-20
+updated: 2026-09-25
 tags: [moc, spuma-vacui, index]
 status: "canonical"
 license: "MIT"
+lang: "en"
 ---
 
 # SPUMA-VACUI — Master Map
 
-> **کانونی‌ترین حد**: حفره (خلأ ساختاری) نتیجهٔ انجماد نوفه در **نوار باریکی** به‌سوی تراکم پایین است — و هر حفره **قطبیده‌ای است که میدانش به دیواره می‌چسبد**.
+> **The most binding statement**: the cavity (structural void) is the result of noise freezing in a **narrow band** toward lower density — and every cavity is a **polar body whose field hugs its wall**.
 
-## Purpose / هدف
+## Purpose
 
-SPUMA-VACUI (*فوم خلأ*) پروژهٔ همتای ساختاری CADENCE-SDF / Emergence-SDF-Vault است: خاستگاه حفره‌های تقریباً هم‌گن قطبیده، از تقابل **دو حد قیدی** در یک بستر فوم‌مانند.
+SPUMA-VACUI (*spuma vacui* — the vacuum foam) is the structural companion of CADENCE-SDF / Emergence-SDF-Vault: the origin of near-homogeneous polarized cavities, from the opposition of **two binding constraints** on a foam-like substrate.
 
-## The Two Binding Constraints / دو حد قیدی
+## The Two Binding Constraints
 
-| حد | گزاره | جلوه |
+| Constraint | Statement | Manifestation |
 |---|---|---|
-| **K1 — حد انفصال خلأ** (Vacuum Discontinuity) | نوفه در تراکم **میانه** یک‌سوژه می‌شود؛ زیر آستانهٔ ρ₀ منجمد (گام‌ها پس زده می‌شوند)، بالای ρ₀ سیال با سوگیری انبساط ناحیه‌ای | انجماد لبه‌ای، تورم ناحیه‌ای، سوگیری لبه‌ها |
-| **K2 — عدم پیوستگی بی‌نهایت تنش قطبیدگی** (Unbounded Polarization-Tension Discontinuity) | مرز حفره یک **لایهٔ قطبیت تیز** است؛ میدان در دیواره محبوس می‌شود (دیوار دو-صفحه‌ای) و طیف واپاشی 1/r³→1/r⁴→1/r⁵ را می‌سازد | دیواره = قطبش ثابت، مانع نافذناپذیر تراوایی؛ مونوپل ممنوع |
+| **K1 — Vacuum Discontinuity** | the noise is rectified at **mid-range** density; below the threshold ρ₀ it freezes (steps rejected), above ρ₀ it flows with a regional-expansion bias | edge freezing, regional inflation, edge sweeping |
+| **K2 — Unbounded Polarization-Tension Discontinuity** | the cavity boundary is a **sharp polarity layer**; the field is trapped in the wall (the two-sheet wall) and builds the decay spectrum 1/r³→1/r⁴→1/r⁵ | wall = fixed polarization, an impermeable permeability barrier; the monopole forbidden |
 
-## The Genesis Mechanism / سازوکار پیدایش حفره
+## The Genesis Mechanism
 
-نوفه (عامل تورم ناحیه‌ای) → سوگیری لبه‌ای در لبهٔ انجماد → کاواک‌های تقریباً هم‌گن → قطبدگی مسیردهی (بافت بافت مانند، تصویر broken-magnet-weave) → پوش دیواره از پوش تراوایی (همتای ترک آهنربای دائم؛ میدان محبوس در دیواره) → هارمونی درونی از **تقابل میدان درونی و سوگیری لبه‌ای**.
+Noise (the agent of regional inflation) → edge sweeping at the freezing edge → near-homogeneous cavities → path polarization (the weave-like tissue, picture broken-magnet-weave) → the wall envelope from the permeability envelope (the twin of the permanent-magnet crack; field trapped in the wall) → intrinsic harmonics from the **interior-field/edge-sweep antagonism**.
 
-## Folder Map / نقشه پوشه‌ها
+## Folder Map
 
-- `01_Axioms/` — اصول: A1 فوم خلا (درجهٔ آزادی در تراکم متوسط، خلأ ≈ ثابت)، A2 دو حد قیدی، A3 قطبیدگی لبه‌ای، A4 هارمونی از تقابل.
-- `02_Constraints/` — صورت‌بندی کمّی K1 و K2 + توزیع اندازهٔ کاواک‌ها (سه رژیم، مقیاس‌گیری فاکتور خوشه) + ممنوعیت مونوپل.
-- `03_Cavity_Harmonics/` — هارمونی درونی حفره، نگاشت به طیف CADENCE، حد تراکم کپلر، **پیش‌بینی طیفی سه رژیم** (باند/خط در برابر دنبالهٔ توانی؛ متمایزساز بعد طیفی d_s).
-- `04_Companion_Mapping/` — پل به همتا + لنگر تجربی کپسول راکتیو + آزمون فالسیفایبل تیزی/بستر (پروتکل کمّی) + **پل کمّی به LIMEN-VACUI** (نگاشت LIMEN(g_max, τ_q, κ) ↔ SPUMA(b)؛ R∈[0.90,0.98] در جفت‌شدگی ضعیف).
-- `00_MOC/` — همین نقشه.
-- `tools/spuma_constraints.py` — هستهٔ عددی قابل اجرا (خروجی ثبت‌شده: `tools/spuma_output.txt`).
-- `tools/cavity_cluster_scaling.py` — شبیه‌ساز توزیع اندازه (خروجی: `tools/cavity_scaling_output.txt`).
-- `tools/spectral_regime_prediction.py` — حل دقیق ω₁ هر خوشه و امضاهای طیفی (خروجی: `tools/spectral_prediction_output.txt`).
-- `tools/spuma_residue_regime_bridge.py` — پل لبهٔ بحرانی K1 × لبهٔ پسماند LIMEN: نسبت بی‌بعد، هویت گِیج، نقطهٔ ملاقات (خروجی: `tools/spuma_residue_regime_bridge_output.txt`).
+- `01_Axioms/` — the axioms: A1 the vacuum foam (one degree of freedom at mid-range density, vacuum ≈ constant), A2 the two binding constraints, A3 edge polarization, A4 harmonics from antagonism.
+- `02_Constraints/` — the quantitative formulations of K1 and K2 + the cavity-size distribution (three regimes, cluster-factor scaling) + the monopole prohibition.
+- `03_Cavity_Harmonics/` — the intrinsic cavity harmonics, the map to the CADENCE spectrum, the Kepler densification ceiling, the **spectral prediction of the three regimes** (band/line vs power-law tail; the spectral-dimension discriminator d_s).
+- `04_Companion_Mapping/` — the bridge to the companion + the reactive-capsule experimental anchor + the sharpness/substrate falsification test (a quantitative protocol) + the **quantitative bridge to LIMEN-VACUI** (the map LIMEN(g_max, τ_q, κ) ↔ SPUMA(b); R∈[0.90,0.98] under weak coupling).
+- `00_MOC/` — this map.
+- `tools/spuma_constraints.py` — the executable numerical core (deposited output: `tools/spuma_output.txt`).
+- `tools/cavity_cluster_scaling.py` — the size-distribution simulator (output: `tools/cavity_scaling_output.txt`).
+- `tools/spectral_regime_prediction.py` — the exact solve of ω₁ per cluster and the spectral signatures (output: `tools/spectral_prediction_output.txt`).
+- `tools/spuma_residue_regime_bridge.py` — the K1 critical-edge × LIMEN residue-edge bridge: the dimensionless ratio, the gauge identity, the encounter point (output: `tools/spuma_residue_regime_bridge_output.txt`).
 
-## Canonical Numbers / اعداد کانونی
+## Canonical Numbers
 
-| کمیت | مقدار | منبع |
+| Quantity | Value | Source |
 |---|---|---|
-| کسری پنج‌ضلعی | 7.356103° | 2π − 5·arccos(1/3) |
-| ناسازگاری رجیستر بافت | 12.3% pitch | K4 (frost-polar دائمی) |
-| سقف تراکم (کپلر) | φ = 0.7405 | K3 |
-| لبهٔ کوانتومی انجماد | h·fc ≈ 0.12 eV | fc = κ_hop/π ≈ 30 THz (همتا، g=0.8) |
-| ناپدیدشدن قطب تک‌دامنه | < 10⁻⁶ | K1 |
-| غیرتوانی‌بودن دنبالهٔ سفید/رنگی | R²≈0 در پنجرهٔ s≤300 | Spectral-Regime-Prediction |
-| τ دقیق (MLE) | 2.031 (2.022±0.019 در L=512؛ 2.034±0.008 در L=1024) | K1-Cavity-Size-Distribution §6 — تأیید 187/91، رد 187/48 |
-| پل LIMEN↔SPUMA | R ∈ [0.90, 0.98] در κ≤0.10؛ (g=0.297, τ_q=40, κ=0.03) ↔ b=0.285 در p_f مشترک 0.299 | Companion-Bridge §5 (ابزار در LIMEN: `limen_spuma_bridge.py`) |
-| گلوگاه بحرانی K1 × لبهٔ پسماند | R_edge = b_c/d_class = 1.841 ± 0.002 (تصحیح E4 از 15.75؛ b_c = 0.1263 ± 0.0002 پایدار در L=256/512/1024) — یک دهک جهانی، نه یک آستانه؛ ملاقات (0.0574, 0.0686) در b_eff = b_c با p_f = 0.5936؛ نهی: d_crit 0.002 < d_det 0.0067 < d_class 0.0686 — و به‌روزرسانی W3: معافیت بودجه‌محدود است (X* ≈ ۱۰–۱۲× کانونی؛ LIMEN `limen_d_crit_price`) | Companion-Bridge §5 (`spuma_residue_regime_bridge`)؛ پروتکل §۵ در LIMEN |
+| Pentagonal deficit | 7.356103° | 2π − 5·arccos(1/3) |
+| Weave register mismatch | 12.3% pitch | K4 (permanent frost-polar) |
+| Densification ceiling (Kepler) | φ = 0.7405 | K3 |
+| Freezing quantum edge | h·fc ≈ 0.12 eV | fc = κ_hop/π ≈ 30 THz (companion, g=0.8) |
+| Single-dipole polarity vanishing | < 10⁻⁶ | K1 |
+| Non-power-law white/colored tails | R²≈0 in the s≤300 window | Spectral-Regime-Prediction |
+| Precise τ (MLE) | 2.031 (2.022±0.019 at L=512; 2.034±0.008 at L=1024) | K1-Cavity-Size-Distribution §6 — confirms 187/91, rejects 187/48 |
+| LIMEN↔SPUMA bridge | R ∈ [0.90, 0.98] at κ≤0.10; (g=0.297, τ_q=40, κ=0.03) ↔ b=0.285 at the shared p_f 0.299 | Companion-Bridge §5 (tool in LIMEN: `limen_spuma_bridge.py`) |
+| K1 critical notch × residue edge | R_edge = b_c/d_class = 1.841 ± 0.002 (E4-corrected from 15.75; b_c = 0.1263 ± 0.0002 stable across L=256/512/1024) — a universal decade, not a threshold; encounter (0.0574, 0.0686) at b_eff = b_c with p_f = 0.5936; no-go: d_crit 0.002 < d_det 0.0067 < d_class 0.0686 — and the W3 update: the exemption is budget-limited (X* ≈ 10–12× canonical; LIMEN `limen_d_crit_price`) | Companion-Bridge §5 (`spuma_residue_regime_bridge`); Protocol §5 in LIMEN |
 
 ## Epistemic Status
 
-مدل‌های K1–K4 **پروتکل‌های قابل اجرا و راستی‌آزموده‌شدهٔ عددی‌اند** (لبهٔ برش تیز K1، ناپدیدشدن مونوپل K1/K2، محبوس‌شدن میدان K3)؛ تفسیر کیهان‌شناختی گزاره‌ای پژوهشی است، نه یافتهٔ تجربی.
+The K1–K4 models are **executable, numerically verified protocols** (the sharp K1 cut edge, the vanishing K1/K2 monopole, the K3 field trapping); the cosmological interpretation is a research statement, not an empirical finding.

@@ -2,42 +2,40 @@
 title: "A1 — Vacuum Foam Substrate"
 aliases: ["A1 Vacuum Foam", "Foam Substrate Axiom"]
 created: 2026-09-20
-updated: 2026-09-20
+updated: 2026-09-25
 tags: [spuma-vacui, axiom, substrate]
 status: "canonical"
 license: "MIT"
+lang: "en"
 ---
 
 # A1 — Vacuum Foam Substrate
-## اصل ۱ — بستر فوم خلأ
 
 > **Structural Causal Chain (SPUMA):**
 > Vacuum Foam (ρ ~ ρ_mid) → Noise-Driven Regional Inflation → Edge Sweeping → Near-Homogeneous Polarized Cavities → Wall Envelope → Intrinsic Harmonics
 
-## 1. Postulate / اصل
-
-بستر بنیادی یک **فوم خلأ** است — رسانه‌ای با درجهٔ آزادی در **تراکم متوسط** (ρ ~ ρ_mid)، که در آن مقدار «خلأ» تقریباً ثابت است و تنها درجهٔ آزادی فعال، **نوفهٔ تراکمی** است: عامل تورم ناحیه‌ای و سوگیری لبه‌ای.
+## 1. Postulate
 
 The fundamental substrate is a **vacuum foam**: a medium carrying one active degree of freedom — mid-range density fluctuation noise — while the vacuum value itself remains approximately constant. The noise is the agent of regional inflation and edge sweeping; nothing else moves first.
 
-## 2. Minimal State Vector / بردار حالت حداقلی
+## 2. Minimal State Vector
 
 $$\text{state} \;=\; \{\rho(x,\tau),\; \mathbf{p}(x,\tau)\},\qquad
 \bar{\rho} = \rho_{\text{mid}} \approx \text{const},\qquad
 \langle \delta\rho^2\rangle^{1/2} \neq 0$$
 
-- ρ: چگالی موضعی فوم (تنها متغیر گسترده).
-- p: میدان مسیردهی محلی (پوش تراوایی بافت؛ جهت‌دار به‌واسطهٔ قطبدگی).
-- خلأ تقریباً ثابت: میانگین بلند-مقیاس ثابت است؛ تغییرپذیری در واریانس است، نه میانگین.
+- ρ: local foam density (the single extensive variable).
+- p: the local path-steering field (the tissue's permeability envelope; directed by virtue of polarization).
+- Quasi-constant vacuum: the large-scale mean is fixed; the variability lives in the variance, not in the mean.
 
-## 3. What This Axiom Does Not Assume / آنچه این اصل فرض نمی‌کند
+## 3. What This Axiom Does Not Assume
 
-- هیچ متریک از پیش‌موجود (سازگار با تقدم قید در CADENCE).
-- هیچ ذره یا میدان بنیادی — فقط فوم، نوفه، و دو حد قیدی ([[A2-Two-Binding-Constraints]]).
-- هیچ تنظیم دقیق (fine-tuning): همگنی کاواک‌ها **نتیجه** سوگیری لبه‌ای است، نه ورودی.
+- No pre-existing metric (consistent with constraint-priority in CADENCE).
+- No particles or fundamental fields — only the foam, the noise, and the two binding constraints ([[A2-Two-Binding-Constraints]]).
+- No fine-tuning: cavity homogeneity is a **consequence** of edge sweeping, not an input.
 
-## 4. Observable Consequences / پیامدهای مشاهده‌پذیر
+## 4. Observable Consequences
 
-1. هر ساختار حفره‌ای باید **قطبیده** باشد (چون از سوگیری لبه‌ای متولد می‌شود).
-2. توزیع اندازهٔ کاواک‌ها باید لبهٔ برش تیز در ρ₀ داشته باشد (K1-Vacuum-Discontinuity]]).
-3. هارمونی درونی حفره‌ها باید از **تقابل میدان درونی و سوگیری لبه‌ای** قابل محاسبه باشد (Intrinsic-Harmonics]]).
+1. Every cavity structure must be **polarized** (it is born from edge sweeping).
+2. The cavity-size distribution must show a sharp cut edge at ρ₀ ([[K1-Vacuum-Discontinuity]]).
+3. The cavities' intrinsic harmonics must be computable from the **interior-field/edge-sweep antagonism** ([[Intrinsic-Harmonics]]).
