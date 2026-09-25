@@ -37,6 +37,7 @@ SPUMA-VACUI (*فوم خلأ*) پروژهٔ همتای ساختاری CADENCE-SDF
 - `tools/spuma_constraints.py` — هستهٔ عددی قابل اجرا (خروجی ثبت‌شده: `tools/spuma_output.txt`).
 - `tools/cavity_cluster_scaling.py` — شبیه‌ساز توزیع اندازه (خروجی: `tools/cavity_scaling_output.txt`).
 - `tools/spectral_regime_prediction.py` — حل دقیق ω₁ هر خوشه و امضاهای طیفی (خروجی: `tools/spectral_prediction_output.txt`).
+- `tools/spuma_residue_regime_bridge.py` — پل لبهٔ بحرانی K1 × لبهٔ پسماند LIMEN: نسبت بی‌بعد، هویت گِیج، نقطهٔ ملاقات (خروجی: `tools/spuma_residue_regime_bridge_output.txt`).
 
 ## Canonical Numbers / اعداد کانونی
 
@@ -50,6 +51,7 @@ SPUMA-VACUI (*فوم خلأ*) پروژهٔ همتای ساختاری CADENCE-SDF
 | غیرتوانی‌بودن دنبالهٔ سفید/رنگی | R²≈0 در پنجرهٔ s≤300 | Spectral-Regime-Prediction |
 | τ دقیق (MLE) | 2.031 (2.022±0.019 در L=512؛ 2.034±0.008 در L=1024) | K1-Cavity-Size-Distribution §6 — تأیید 187/91، رد 187/48 |
 | پل LIMEN↔SPUMA | R ∈ [0.90, 0.98] در κ≤0.10؛ (g=0.297, τ_q=40, κ=0.03) ↔ b=0.285 در p_f مشترک 0.299 | Companion-Bridge §5 (ابزار در LIMEN: `limen_spuma_bridge.py`) |
+| گلوگاه بحرانی K1 × لبهٔ پسماند | R_edge = b_c/d_class = 15.75 ± 0.25 — یک دهک جهانی، نه یک آستانه؛ ملاقات (0.0574, 0.0686) در b_eff = b_c با p_f = 0.5936؛ نهی: d_crit 0.002 < d_det 0.0067 < d_class 0.0686 | Companion-Bridge §5 (`spuma_residue_regime_bridge`)؛ پروتکل §۵ در LIMEN |
 
 ## Epistemic Status
 

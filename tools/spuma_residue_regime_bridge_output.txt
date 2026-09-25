@@ -1,0 +1,66 @@
+==========================================================================
+K1 CRITICAL EDGE x RESIDUE-CLASSIFICATION EDGE — universality test
+register: K1 freeze-out L=256 (m0=1.5, sigma_xi=1) ; LIMEN map b=0.30, m=0.61722
+==========================================================================
+
+[1] dimensionless ratios [exact model] — bias depth over its own margin scale:
+    r_LIMEN = d_class/m  = eps/(1-eps) = 0.1111   (= 1/9 at eps=0.1)
+    r_SPUMA = b_c/m0                   = 0.0840
+    ratio r_L/r_S = 1.323  -> same decade (1e-1), NOT equal.
+    honest statement: same-order ratios alone are numerology (residue-test
+    v1 lesson) — the real test is the composed dynamics below.
+
+[2] freeze-out gauge identity [exact]: mask(b, d) == mask(b+d, 0) —
+    the field sees only b_eff = b + d; p_f and regime are d-blind.
+    seed 1: identical masks: True (p_f = 0.5945 both)
+    gauge identity: HOLDS bit-for-bit [exact]
+
+[3] MEETING POINT [measured]: (b = b_c - d_class, d = d_class) = (0.0574, 0.0686)
+    claim: there is exactly ONE composed pair where the K1 field sits at
+    the critical edge (p_f = p_c) AND the residue classification flips.
+    p_f(meeting) = 0.5936  (target p_c = 0.592746)   span 33%  -> regime: CRITICAL band + finite-size spanning
+    rel(d_class) = 0.1000  -> classification edge (=0.1) [exact model]
+    control p_f(b_c, d=0) = 0.5936 — equal by the gauge identity.
+    MEETING CONFIRMED: YES [measured] + rel edge [exact model]
+
+[4] NO-GO at b_c [measured]: holding the field critical excludes any
+    detectable residue — the two edges exclude each other AT b_c.
+    critical band (from calibration): b in [0.1240, 0.1280]  -> max one-sided depth d_crit = 0.002
+    LIMEN edges:                     d_det = 0.0067   d_class = 0.0686
+    ordering: d_crit (0.002) < d_det (0.0067) < d_class (0.0686)  [exact model from measured band]
+    -> at b = b_c, a one-sided correction deep enough to DETECT (d>d_det)
+       already moves p_f by ~0.0156 — 1.6x the FULL critical band (0.010) — i.e.
+       pushes the field OFF criticality. Critical K1 is residue-clean
+       BY GEOMETRY: verdict at criticality is 'frame-made or undetectable'.
+      b=b_c, d=d_det (0.0067): p_f = 0.5775 (Delta p_f = +0.0161 vs band width 0.010)
+      b=b_c, d=d_class (0.0686): p_f = 0.4527 (Delta p_f = +0.1409 vs band width 0.010)
+
+[5] classification x regime matrix [measured] (L=256, 2 seeds; rel [exact model]):
+          b       d   b_eff     p_f  span%  regime                      rel class
+     0.0574  0.0000  0.0574  0.7760  100.0  NETWORK (supercritical)   0.000 frame-made
+     0.0574  0.0686  0.1260  0.5933    0.0  CRITICAL band             0.100 frame-made
+     0.1260  0.0000  0.1260  0.5933    0.0  CRITICAL band             0.000 frame-made
+     0.1260  0.0686  0.1946  0.4527    0.0  ISOLATED (subcritical)    0.100 frame-made
+     0.1946  0.0000  0.1946  0.4526    0.0  ISOLATED (subcritical)    0.000 frame-made
+     0.1946  0.0686  0.2632  0.3446    0.0  ISOLATED (subcritical)    0.100 frame-made
+     0.2850  0.0000  0.2850  0.3173    0.0  ISOLATED (subcritical)    0.000 frame-made
+     0.2850  0.0686  0.3536  0.2436    0.0  ISOLATED (subcritical)    0.100 frame-made
+
+==========================================================================
+VERDICT:
+  1. NOT one universal threshold: p_f is d-blind [exact gauge identity],
+     the classification is p_f-blind — the edges live on ORTHOGONAL axes
+     of one register (b_eff = b + d).
+  2. They DO meet, exactly once: (b, d) = (0.0574, 0.0686) with b_eff = b_c —
+     field critical AND classification edge co-occur [measured + exact model].
+  3. No-go at b_c: d_crit=0.002 < d_det=0.0067 < d_class=0.0686 — criticality
+     excludes any detectable residue; conversely a residue-REAL correction
+     (d > d_class) drives the field deep-subcritical (isolated cavities —
+     SPUMA's desired register). The classification edge GUARDS the entrance
+     of the isolated-cavity regime.
+  4. ratios r_L=1/9, r_S=0.084 (ratio 1.32) are same-decade but their
+     equality is NOT what makes the meeting exist — composition does.
+     At the meeting the channel split b:d = 0.06:0.07 (~45:55)
+     [protocol-mirror, conceptual; depends on eps=0.1].
+labels: gauge identity [exact]; meeting/no-go/matrix [measured];
+rel(d)=d/(m+d) [exact model]; interpretation [protocol-mirror, conceptual].
