@@ -53,5 +53,5 @@ colored noise                      LINE  Q=3.3, support=0.34 dec   -> homogeneou
 Caveats (honest): (1) lattice units c/a=1; s<~4 deviates O(1) from continuum.
 (2) tau = 187/91 (K1 docstring printed 187/48 = 2 + D_f, not tau).
 (3) exponent fits restricted to 16<=s<=300 (exact solver); larger clusters
-    counted but unsolved — coverage printed per run.
+    counted but unsolved â€” coverage printed per run.
 (4) spanning network removed by boundary test; p_f calibrated to 0.588-0.598.

@@ -62,6 +62,8 @@ For the companion model (spectroscopy of cavity resonances on the pentagonal lat
 
 ## 5. Epistemic Status
 
+**W2 register deposit (2026-09-26):** this tool, run at the meeting point (b, d) = (0.0574, 0.0686), b_eff = b_c (the LIMEN critical∧REAL encounter), reproduces the **plain critical spectrum** — γ_s = 0.116 → d_s = 8.6 (window-limited), α₁ = +2.63, α₂ = −1.33, p_f = 0.5938. **The composition is spectrally invisible on the critical axis**: no separate single-scale band, no composite exponent — the spectral shadow of the gauge identity mask(b,d) = mask(b+d, 0). Consequence: the pentagonal node's even/odd discrimination factor δθ = 0.02044 stays the **sole registered carrier** of the node's physics — a scale collision with d_s-window limits, preserved as an F3-flagged open item. Register: LIMEN `08_Protocol/Two-Realm-Register` — W2 ✅ done.
+
 - **Exact:** the operator and solve (10⁻¹⁶ validation); the non-power-law character of white/colored tails in the s≤300 window (R²≈0).
 - **Model:** the mapping ω₁ = √λ₁ on-lattice → intrinsic harmonics (the assumption ω² = ω_field² + ω_edge² + … of Intrinsic-Harmonics; the operator here only measures the geometric dimension).
 - **Open:** determining d_s (the s≤300 window is insufficient); a smoothed iterative solver for s~10³–10⁴.
