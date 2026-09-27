@@ -35,6 +35,8 @@ $$f_n \;\approx\; \frac{c_{\text{wall}}}{2\pi R}\,n\,\Big(1 + \epsilon_n\,\frac{
 
 The pentagonal angle deficit δθ/2π = 0.02044 as the even/odd discrimination factor — a direct link to the CADENCE spectrum ([[Companion-Bridge]]).
 
+> **W4 verdict (2026-09-27, registered in LIMEN `08_Protocol/Two-Realm-Register`):** the §2 parity prediction (ε_even = 1, ε_odd = 0, constant in n) was put to the banked "wall model with explicit μ(x)" test (LIMEN `tools/limen_w4_mu_wall.py` — variational two-phase μ(x) Helmholtz, five-fold wall modulation w(φ)=w₀(1+η·cos5φ), η = δθ/2π) and is **refuted in-model**: no even/odd alternation (even mean +0.220 vs odd +0.262; discrimination −0.042 ± 0.08 vs the predicted +1.0), the split is n-dependent, and the discrimination has no finite-size fixed point. **E4-corrected reading:** a magnitude-only five-fold wall couples all radial modes — parity must live in a direction-structured (five-phase chiral) register; δθ/2π is remeasured as the even/odd-FLATNESS amplitude of the magnitude channel (~0.02, the right order). Prediction 1 of §3 is thereby sharpened, not abandoned: the flattened ratio δθ/2π is the magnitude-channel signature; the parity split is a direction-register signature (flagged W4b). Nature-side status: F3.
+
 ## 3. Falsifiable Predictions
 
 1. Same-family cavities must show an **even/odd-flattened** spectrum with the constant ratio δθ/2π.

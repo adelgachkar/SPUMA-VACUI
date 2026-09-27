@@ -55,9 +55,9 @@ lang: "en"
 
 ## 4. Open Questions
 
-1. The closed form of ω_n (the even/odd correction ε_n) from the antagonism — needs a wall model with explicit μ(x).
+1. ~~The closed form of ω_n (the even/odd correction ε_n) from the antagonism — needs a wall model with explicit μ(x)~~ — **executed and E4-corrected (W4, 2026-09-27)**: the wall-magnitude model refutes the even/odd parity claim in-model (LIMEN `tools/limen_w4_mu_wall.py`); δθ/2π = 0.0204 remeasured as the even/odd-flatness magnitude of the magnitude channel; the parity split migrates to a direction-structured register (W4b, flagged in the register).
 2. ~~The cavity-size distribution in the sharp-edge regime~~ — **solved** (v0.2.0): three regimes, b_c = 0.126, D = 1.78, the first-passage form p_f = e^{−2bm₀} with κ = 3.17 → `02_Constraints/K1-Cavity-Size-Distribution`.
-3. Is the K1 freezing edge the companion's ℏκ~k_BT transition? (different working scales: 0.12 eV vs 0.026 eV — a ratio ≈ 4.6 to be explained).
+3. Is the K1 freezing edge the companion's ℏκ~k_BT transition? (different working scales: 0.12 eV vs 0.026 eV — a ratio ≈ 4.6 to be explained; the register's last pending flag, W5).
 
 ## 5. Bridge to LIMEN-VACUI (the third sister)
 
