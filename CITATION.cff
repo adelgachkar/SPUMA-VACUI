@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this framework or software, please cite it as below."
+authors:
+  - family-names: "Gachkar"
+    given-names: "Adel"
+    affiliation: "Islamic Azad University, Urmia"
+title: "SPUMA-VACUI: Vacuum-Foam Substrate Dynamics — Constraint-Aligned Emergence with Near-Homogeneous Polarized Cavities"
+version: 0.4.8
+date-released: 2026-09-28
+license: "MIT"
+repository-code: "https://github.com/adelgachkar/SPUMA-VACUI"
+abstract: "A vacuum-foam substrate model: noise-driven regional inflation, edge-sweeping, and near-homogeneous polarized cavities under two binding constraints (K1 vacuum discontinuity; K2 polarization-tension non-continuity). Includes the K1 critical-edge calibration (b_c = 0.1263±0.0002, corrected ratio R_edge = 1.841), the three cavity-size regimes with spectral translation, the T1 freeze-out battery, and the Companion-Bridge mapping (OQ3 closed by the W5 common-operator result). Model-level claims with executed numerical protocols; no empirical cosmological claim is made."
+keywords:
+  - vacuum foam
+  - cavity harmonics
+  - freeze-out percolation
+  - critical exponents
+  - companion mapping
