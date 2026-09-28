@@ -1,5 +1,8 @@
 # SPUMA-VACUI
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23006052.svg)](https://doi.org/10.5281/zenodo.23006052)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23006053.svg)](https://doi.org/10.5281/zenodo.23006053) · version DOI (v0.4.9); the concept DOI above always resolves to the latest version.
+
 **Spuma Vacui** ("the foam of the vacuum") — Vacuum-Foam Genesis from Two Binding Constraints
 
 > SPUMA-VACUI (*spuma vacui*, "foam of the vacuum") is the structural-companion
