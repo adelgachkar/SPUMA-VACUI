@@ -6,8 +6,8 @@ authors:
     affiliation: "Islamic Azad University, Urmia"
     orcid: "https://orcid.org/0009-0006-7713-6004"
 title: "SPUMA-VACUI: Vacuum-Foam Substrate Dynamics — Constraint-Aligned Emergence with Near-Homogeneous Polarized Cavities"
-version: 0.4.9
-doi: 10.5281/zenodo.23006053
+version: 0.4.10
+doi: 10.5281/zenodo.23017334
 date-released: 2026-09-28
 license: "MIT"
 repository-code: "https://github.com/adelgachkar/SPUMA-VACUI"
