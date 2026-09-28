@@ -1,5 +1,5 @@
 {
-  "title": "SPUMA-VACUI: Vacuum-Foam Substrate Dynamics \u2014 Constraint-Aligned Emergence with Near-Homogeneous Polarized Cavities",
+  "title": "SPUMA-VACUI: Vacuum-Foam Substrate Dynamics — Constraint-Aligned Emergence with Near-Homogeneous Polarized Cavities",
   "upload_type": "publication",
   "publication_type": "workingpaper",
   "access_right": "open",
@@ -8,7 +8,7 @@
     {
       "name": "Gachkar, Adel",
       "affiliation": "Islamic Azad University, Urmia",
-      "orcid": ""
+      "orcid": "0009-0006-7713-6004"
     }
   ],
   "description": "<p>SPUMA-VACUI models a vacuum-foam substrate: noise-driven regional inflation, edge-sweeping, and near-homogeneous polarized cavities under two binding constraints (K1 vacuum discontinuity; K2 polarization-tension non-continuity). Includes the K1 critical-edge calibration (b_c = 0.1263&plusmn;0.0002, corrected ratio R_edge = 1.841), the three cavity-size regimes with spectral translation, the T1 freeze-out battery, and the Companion-Bridge mapping (OQ3 closed by the W5 common-operator result: one operator, two clocks, no third scale; family-wide convention f_c = &kappa;[rad/s]/&pi;). Companion repositories: LIMEN-VACUI (protocol home), Emergence-SDF-Vault, CADENCE-SDF. Model-level claims with executed numerical protocols; no empirical cosmological claim is made.</p>",
