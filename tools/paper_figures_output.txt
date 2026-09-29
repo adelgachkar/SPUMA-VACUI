@@ -1,0 +1,111 @@
+Matplotlib is building the font cache; this may take a moment.
+== 1) cavity fraction p_f(b): first-passage prediction p_f = exp(-2 b m0), m0=1.5 ==
+     b   p_f sim (L=256, 3 seeds)  exp(-2bm0)
+  0.05                     0.7857      0.8607
+  0.10                     0.6533      0.7408
+  0.15                     0.5374      0.6376
+  0.20                     0.4426      0.5488
+  0.30                     0.2992      0.4066
+  0.50                     0.1409      0.2231
+  0.80                     0.0491      0.0907
+  1.20                     0.0140      0.0273
+  1.80                     0.0032      0.0045
+  2.50                     0.0015      0.0006
+  3.20                     0.0013      0.0001
+-> simulated b_c (p_f = p_c = 0.5927): 0.126   (first-passage estimate: 0.174)
+
+== 2) critical regime b ~= b_c: cluster-factor scaling (L sweep, 3 seeds) ==
+    L     p_f  span%  tau fit  s_c=<s2>/<s1>
+   64  0.5946  100.0    0.924          165.1
+  128  0.5932   33.3    0.930          480.7
+  256  0.5888    0.0    0.917         1725.1
+  384  0.5890   33.3    0.934         3991.9
+-> tau fit ~ 0.917 vs 2D percolation 2.055
+-> cutoff growth s_c ~ L^D: fitted D = 1.78 vs 1.90 (critical) ; spanning -> 100% at b_c
+
+== 3) off-critical b = b_c + 0.05: cluster-factor saturation ==
+   s_c(L=64,128,256) = 22.9, 37.1, 40.0 -> flat (L-independent): noncritical cluster factor
+
+== 4) colored noise lc=3px at b=0.30: characteristic cavity blobs ==
+   L=128: p_f=0.299  s_c=   29.3  span=0%
+      n(s) top bins s~[  9  15  25  42  70 116]:       39       16        8        3        1        0
+   L=256: p_f=0.296  s_c=   31.6  span=0%
+      n(s) top bins s~[ 11  18  32  54  93 159]:      114       47       20        6        1        0
+
+== 5) isolated-cavity regime b=0.30 (white): n(s) binned (L=256, pooled) ==
+   s~    1   n(s)~  32823.7
+   s~    1   n(s)~   6679.1
+   s~    2   n(s)~      0.0
+   s~    3   n(s)~   2994.9
+   s~    5   n(s)~    841.7
+   s~    7   n(s)~    258.3
+   s~   10   n(s)~    163.2
+   s~   14   n(s)~     33.4
+   s~   21   n(s)~      9.4
+   s~   30   n(s)~      1.0
+   mean cavity size = 2.34 sites ; largest = 36
+== Spectral regime prediction: cavity fundamental frequency from the exact
+   on-lattice Dirichlet Laplacian (s<=300 exact); spanning clusters removed
+   by boundary test; discriminator: gamma_s = 1/d_s. p_f printed per run.
+
+-- operator sanity: exact n x n squares vs sqrt(4-4cos(pi/(n+1)))
+   n=  4: omega=0.874032 analytic=0.874032 diff=1.1e-16
+   n=  8: omega=0.491151 analytic=0.491151 diff=5.6e-17
+   n= 16: omega=0.260974 analytic=0.260974 diff=5.1e-14
+
+-- calibrating b_c on p_f (L=256, 2 seeds each):
+   b=0.122: p_f = 0.6028  (target 0.592746)
+   b=0.126: p_f = 0.5933  (target 0.592746)
+   b=0.130: p_f = 0.5840  (target 0.592746)
+   b=0.134: p_f = 0.5743  (target 0.592746)
+   -> chosen b_c = 0.126
+
+-- white subcritical (b=0.30)
+   p_f = 0.2987 (target 0.592746)   clusters total=33620, exact-solved=33620 (spanning/network excluded=0)
+   s_max(solved)=41  omega=[1.0042,2.000] (0.30 dec)
+   gamma_s = 0.095 (R^2=0.058, n=156)  ->  d_s = 10.534
+   alpha1: +0.63 (R^2=0.007)   alpha2: +0.00 (R^2=0.000)
+   shape: Q=6.12, support=0.16 dec, std(ln w)=0.135, std(ln s)=0.707
+
+-- critical (b=0.126, L=512)
+   p_f = 0.5938 (target 0.592746)   clusters total=14639, exact-solved=14596 (spanning/network excluded=43)
+   s_max(solved)=295  omega=[0.7175,2.000] (0.45 dec)
+   gamma_s = 0.116 (R^2=0.460, n=843)  ->  d_s = 8.595
+   alpha1: +2.63 (R^2=0.185)   alpha2: -1.33 (R^2=0.055)
+   shape: Q=3.40, support=0.24 dec, std(ln w)=0.194, std(ln s)=1.025
+
+-- colored noise (lc=3, b=0.30)
+   p_f = 0.2953 (target 0.592746)   clusters total=10986, exact-solved=10986 (spanning/network excluded=0)
+   s_max(solved)=208  omega=[0.6216,2.000] (0.51 dec)
+   gamma_s = 0.173 (R^2=0.406, n=1341)  ->  d_s = 5.776
+   alpha1: -1.55 (R^2=0.063)   alpha2: -3.77 (R^2=0.311)
+   shape: Q=3.27, support=0.34 dec, std(ln w)=0.269, std(ln s)=1.205
+
+== Discriminators ==
+white subcritical                  BAND  support=0.16 dec, Q=6.1   -> near-homogeneous (A1 ok)
+critical (b=0.126, L=512)          TAIL  see below   -> FORBIDDEN register (network)
+colored noise                      LINE  Q=3.3, support=0.34 dec   -> homogeneous register (A1 strongest)
+
+-> critical-regime spectral dimension (the discriminator):
+   measured gamma_s = 0.116  ->  d_s = 8.595
+   reference bands: compact-like gamma~=0.50 (d_s=2) | ramified gamma~=0.72-0.75 (d_s~1.31-4/3)
+   verdict: COMPACT-LIKE
+   predicted alpha1 = d_s(tau-1)-1: compact-like 1.11 | ramified +0.41
+   measured alpha1 = +2.63, alpha2 = -1.33 (alpha2 robust prediction ~ -0.9)
+
+-> linewidth = polydispersity probe (colored regime, ln space):
+   std(ln omega) = 0.269  vs  (1/2) std(ln s) = 0.602  (compact rule; small-cavity discrete saturation compresses the line)
+
+Caveats (honest): (1) lattice units c/a=1; s<~4 deviates O(1) from continuum.
+(2) tau = 187/91 (K1 docstring printed 187/48 = 2 + D_f, not tau).
+(3) exponent fits restricted to 16<=s<=300 (exact solver); larger clusters
+    counted but unsolved — coverage printed per run.
+(4) spanning network removed by boundary test; p_f calibrated to 0.588-0.598.
+fig1 done
+fig2: pooled N=11772, p_f=0.5893, tau=0.904
+fig2 done
+fig3 [isolated white noise (b = 0.30)]: solved=33627/33627, omega range 1.004-2.000
+fig3 [critical (b = 0.126, L=512)]: solved=15388/15388, omega range 0.717-2.000
+fig3 [correlated noise (lc = 3 px, b = 0.30)]: solved=10986/10986, omega range 0.622-2.000
+fig3 done
+ALL FIGURES DONE -> C:\Users\adel\Documents\SPUMA-VACUI\paper\figures
