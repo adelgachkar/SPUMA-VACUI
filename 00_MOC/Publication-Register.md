@@ -26,7 +26,7 @@ lang: "en"
 | Title | SPUMA-VACUI: Emergence of Near-Homogeneous Polarized Cavities in a Vacuum-Foam Substrate via Dual Boundary Constraints |
 | Journal | International Journal of Theoretical Physics (Springer) |
 | Type | Research (original article) |
-| Submission ID | `9bea6606-4b8b-486b-9378-742cff6dc1b9` |
+| Submission ID | `9bea6706-4b8b-486b-9378-742cff6dc1b9` |
 | Author | Adel Gachkar (ORCID 0009-0006-7713-6004), single author |
 | Current version | v1.0 (initial submission) → v1.1 (post-TC revision, re-submitted) |
 
