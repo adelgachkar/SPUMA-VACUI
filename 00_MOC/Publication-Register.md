@@ -13,6 +13,11 @@ lang: "en"
 
 # Publication-Register — SPUMA-VACUI journal submission
 
+> **Canonical archive:** the permanent, self-contained dossier for this submission
+> lives in the local vault `Documents/IJTP-Review-Dossier/` (correspondence,
+> hash-verified versions, figures, references block, checklists). This note is the
+> repository-side mirror of its timeline.
+
 > **Epistemic status:** this note is an administrative timeline, not physics content.
 > It records the journal submission history of the SPUMA-VACUI manuscript with the
 > same timestamp discipline the family applies to its numerical register (every claim
