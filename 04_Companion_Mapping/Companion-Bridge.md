@@ -76,6 +76,10 @@ $$\text{LIMEN}(g_{\max}=0.297,\ \tau_q=40,\ \kappa=0.03) \;\Longleftrightarrow\;
 
 ## 6. Repositories
 
-- Companion: `github.com/adelgachkar/Emergence-SDF-Vault` (v30.3) — this project feeds on its derived constants (κ_hop, τ_d, δθ).
-- Second companion: `github.com/adelgachkar/CADENCE-SDF` (v3.6.5) — the ΔH_boundary, boundary-zero-point, R_loss vocabulary.
-- Third sister: `github.com/adelgachkar/LIMEN-VACUI` — the quantitative bridge §5.
+- Companion: `github.com/adelgachkar/Emergence-SDF-Vault` (v30.3.11) — this project feeds on its derived constants (κ_hop, τ_d, δθ).
+- Second companion: `github.com/adelgachkar/CADENCE-SDF` (v3.6.9) — the ΔH_boundary, boundary-zero-point, R_loss vocabulary.
+- Third sister: `github.com/adelgachkar/LIMEN-VACUI` (v0.12.3) — the quantitative bridge §5; canonical home of the Aligned Protocol and the Two-Realm Register.
+- Fourth sibling: `github.com/adelgachkar/VMC-QF` (v0.3.0) — vacuum-microcavity quantum-foam dynamics; shares the family's register-bank discipline (records Vault-11..15q) and the δθ = 7.356103° constant; mirrors its family row in the LIMEN wiki.
+- Fifth sibling: `github.com/adelgachkar/CRG-Flux` (v0.1.0) — the flexoelectric-to-cosmological framework; the mesoscopic condensed-matter arm of the family.
+
+The family's live cross-repository map (version and DOI table, register bank, fa↔EN) is maintained in the LIMEN-VACUI `wiki/` directory.

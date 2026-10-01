@@ -63,6 +63,19 @@ In short: two of the three imported constants (δθ, φ_max) are closed-geometry
 mathematics, one (f_c) is a product of our own simulation chain, and the single
 real-world experimental anchor (graphene) certifies a mechanism, not the substrate.
 
+## The SDF Family (six repositories)
+
+One epistemic protocol, six repositories — canonical home in [LIMEN-VACUI](https://github.com/adelgachkar/LIMEN-VACUI), live map in its `wiki/`:
+
+| Repository | Version | Role |
+|---|---|---|
+| [LIMEN-VACUI](https://github.com/adelgachkar/LIMEN-VACUI) | v0.12.3 | pre-boundary narrative + Aligned Protocol + Two-Realm Register (canonical home) |
+| [SPUMA-VACUI](https://github.com/adelgachkar/SPUMA-VACUI) *(this repo)* | v0.4.10 | K1/K2 cavity emergence on the vacuum foam |
+| [Emergence-SDF-Vault](https://github.com/adelgachkar/Emergence-SDF-Vault) | v30.3.11 | derived constants (κ_hop, τ_d, δθ) feeding SPUMA |
+| [CADENCE-SDF](https://github.com/adelgachkar/CADENCE-SDF) | v3.6.9 | ΔH_boundary, boundary-zero-point, R_loss vocabulary |
+| [CRG-Flux](https://github.com/adelgachkar/CRG-Flux) | v0.1.0 | flexoelectric-to-cosmological framework |
+| [VMC-QF](https://github.com/adelgachkar/VMC-QF) | v0.3.0 | vacuum-microcavity quantum-foam dynamics; register records Vault-11..15q |
+
 ## License
 
 MIT — Adel Gachkar
